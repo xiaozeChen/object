@@ -8,7 +8,8 @@
     <ImageView
         android:id="@+id/iv_photo"
         android:layout_width="match_parent"
-        android:layout_height="400dp" />
+        android:layout_height="0dp"
+        android:layout_weight="1" />
 
     <Button
         android:id="@+id/btn_takePhoto"

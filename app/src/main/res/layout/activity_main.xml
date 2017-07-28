@@ -34,6 +34,11 @@
                 android:text="LiveWallPaper" />
         </LinearLayout>
 
+        <Button
+            android:id="@+id/btn_NestedScroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="NestedScroll" />
     </LinearLayout>
 
 </ScrollView>

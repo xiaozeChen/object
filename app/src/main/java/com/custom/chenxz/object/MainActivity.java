@@ -12,7 +12,8 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 
 import com.custom.chenxz.object.server.VideoLiveWallpaper;
-import com.custom.chenxz.object.view.TakePhotoAcitivity;
+import com.custom.chenxz.object.view.NestedScrollActivity;
+import com.custom.chenxz.object.view.TakePhotoActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -27,6 +28,8 @@ public class MainActivity extends AppCompatActivity {
     Button btnLiveWallPaper;
     @BindView(R.id.cb_voice)
     CheckBox cbVoice;
+    @BindView(R.id.btn_NestedScroll)
+    Button btnNestedScroll;
     private Unbinder bind;
 
     @Override
@@ -51,14 +54,17 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    @OnClick({R.id.btn_android7, R.id.btn_LiveWallPaper})
+    @OnClick({R.id.btn_android7, R.id.btn_LiveWallPaper, R.id.btn_NestedScroll})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.btn_android7:
-                startActivity(new Intent(this, TakePhotoAcitivity.class));
+                startActivity(new Intent(this, TakePhotoActivity.class));
                 break;
             case R.id.btn_LiveWallPaper:
                 VideoLiveWallpaper.setToWallPaper(this);
+                break;
+            case R.id.btn_NestedScroll:
+                startActivity(new Intent(this, NestedScrollActivity.class));
                 break;
         }
     }
@@ -76,5 +82,9 @@ public class MainActivity extends AppCompatActivity {
             bind.unbind();
             bind = null;
         }
+    }
+
+    @OnClick(R.id.btn_NestedScroll)
+    public void onViewClicked() {
     }
 }

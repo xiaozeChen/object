@@ -4,7 +4,6 @@ import android.Manifest;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -14,13 +13,16 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.custom.chenxz.object.R;
-import com.custom.chenxz.object.utils.FileProvider7;
+import com.custom.chenxz.object.utils.OSHelper;
+import com.custom.chenxz.object.utils.block_detect.FileProvider7;
+import com.squareup.picasso.Picasso;
 
 import java.io.File;
 import java.text.SimpleDateFormat;
@@ -35,7 +37,7 @@ import butterknife.OnClick;
  * Created by Administrator on 2017/7/21.
  */
 
-public class TakePhotoAcitivity extends AppCompatActivity {
+public class TakePhotoActivity extends AppCompatActivity {
     private static final int REQUEST_CODE_TAKE_PHOTO = 0x110;
     private static final int REQUEST_CAMERA_PERMISSION = 0x200;
     @BindView(R.id.iv_photo)
@@ -43,6 +45,7 @@ public class TakePhotoAcitivity extends AppCompatActivity {
     @BindView(R.id.btn_takePhoto)
     Button btnTakePhoto;
     private String mCurrentPhotoPath;
+    private Uri fileUri;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -70,7 +73,7 @@ public class TakePhotoAcitivity extends AppCompatActivity {
             String filename = new SimpleDateFormat("yyyyMMdd-HHmmss", Locale.CHINA).format(new Date()) + ".png";
             File file = new File(Environment.getExternalStorageDirectory(), filename);
             mCurrentPhotoPath = file.getAbsolutePath();
-            Uri fileUri = FileProvider7.getUriForFile(this, file);
+            fileUri = FileProvider7.getUriForFile(this, file);
             takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, fileUri);
             startActivityForResult(takePictureIntent, REQUEST_CODE_TAKE_PHOTO);
         }
@@ -82,7 +85,14 @@ public class TakePhotoAcitivity extends AppCompatActivity {
         if (resultCode == RESULT_OK) {
             switch (requestCode) {
                 case REQUEST_CODE_TAKE_PHOTO:
-                    ivPhoto.setImageBitmap(BitmapFactory.decodeFile(mCurrentPhotoPath));
+                    Log.e("CXZ", "类名:TakePhotoAcitivity  方法名: onActivityResult mCurrentPhotoPath==" + mCurrentPhotoPath);
+                    Log.e("CXZ", "类名:TakePhotoAcitivity  方法名: onActivityResult fileUri==" + fileUri);
+                    if (OSHelper.isMIUI()) {//miui部分手机加载大图无法显示需要进行压缩
+                        Picasso.with(this).load(fileUri).resize(500, 500).centerCrop().into(ivPhoto);
+                    } else {
+                        Picasso.with(this).load(fileUri).into(ivPhoto);
+                    }
+//                    ivPhoto.setImageBitmap(BitmapFactory.decodeFile(mCurrentPhotoPath));
                     break;
 
             }
@@ -115,8 +125,8 @@ public class TakePhotoAcitivity extends AppCompatActivity {
 
     @OnClick(R.id.btn_takePhoto)
     public void onViewClicked(View view) {
-        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
-            requestPermission(this, Manifest.permission.CAMERA);
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED || ActivityCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE}, REQUEST_CAMERA_PERMISSION);
             return;
         } else {
             takePhotoNoCompress();
