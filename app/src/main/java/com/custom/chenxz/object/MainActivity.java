@@ -12,6 +12,8 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 
 import com.custom.chenxz.object.server.VideoLiveWallpaper;
+import com.custom.chenxz.object.view.ExpandableListActivity;
+import com.custom.chenxz.object.view.NestRecycleViewInScrollViewActivity;
 import com.custom.chenxz.object.view.NestedScrollActivity;
 import com.custom.chenxz.object.view.TakePhotoActivity;
 
@@ -30,6 +32,10 @@ public class MainActivity extends AppCompatActivity {
     CheckBox cbVoice;
     @BindView(R.id.btn_NestedScroll)
     Button btnNestedScroll;
+    @BindView(R.id.btn_RvInSV)
+    Button btnRvInSv;
+    @BindView(R.id.btn_ExpandableListView)
+    Button btnExpandableListView;
     private Unbinder bind;
 
     @Override
@@ -54,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    @OnClick({R.id.btn_android7, R.id.btn_LiveWallPaper, R.id.btn_NestedScroll})
+    @OnClick({R.id.btn_android7, R.id.btn_LiveWallPaper, R.id.btn_NestedScroll, R.id.btn_RvInSV, R.id.btn_ExpandableListView})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.btn_android7:
@@ -65,6 +71,12 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.btn_NestedScroll:
                 startActivity(new Intent(this, NestedScrollActivity.class));
+                break;
+            case R.id.btn_RvInSV:
+                startActivity(new Intent(this, NestRecycleViewInScrollViewActivity.class));
+                break;
+            case R.id.btn_ExpandableListView:
+                startActivity(new Intent(this, ExpandableListActivity.class));
                 break;
         }
     }
@@ -82,9 +94,5 @@ public class MainActivity extends AppCompatActivity {
             bind.unbind();
             bind = null;
         }
-    }
-
-    @OnClick(R.id.btn_NestedScroll)
-    public void onViewClicked() {
     }
 }

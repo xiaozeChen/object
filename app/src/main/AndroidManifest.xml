@@ -22,8 +22,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".view.TakePhotoAcitivity" />
+        <activity android:name=".view.TakePhotoActivity" />
         <activity android:name=".view.NestedScrollActivity" />
+        <activity android:name=".view.NestRecycleViewInScrollViewActivity" />
+        <activity android:name=".view.ExpandableListActivity" />
 
         <provider
             android:name="android.support.v4.content.FileProvider"

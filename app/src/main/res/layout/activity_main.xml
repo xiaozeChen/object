@@ -39,6 +39,18 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="NestedScroll" />
+
+        <Button
+            android:id="@+id/btn_RvInSV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="RvInSV" />
+
+        <Button
+            android:id="@+id/btn_ExpandableListView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ExpandableListView" />
     </LinearLayout>
 
 </ScrollView>
