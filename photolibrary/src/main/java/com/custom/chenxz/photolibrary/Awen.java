@@ -4,7 +4,6 @@ import android.content.Context;
 import android.support.annotation.ColorInt;
 import android.support.annotation.ColorRes;
 
-import com.awen.photo.photopick.util.ImagePipelineConfigFactory;
 import com.facebook.drawee.backends.pipeline.Fresco;
 
 /**

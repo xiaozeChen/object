@@ -11,11 +11,13 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 
+import com.custom.chenxz.object.databean.ImageProvider;
 import com.custom.chenxz.object.server.VideoLiveWallpaper;
 import com.custom.chenxz.object.view.ExpandableListActivity;
 import com.custom.chenxz.object.view.NestRecycleViewInScrollViewActivity;
 import com.custom.chenxz.object.view.NestedScrollActivity;
 import com.custom.chenxz.object.view.TakePhotoActivity;
+import com.custom.chenxz.photolibrary.PhotoPagerConfig;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -36,6 +38,8 @@ public class MainActivity extends AppCompatActivity {
     Button btnRvInSv;
     @BindView(R.id.btn_ExpandableListView)
     Button btnExpandableListView;
+    @BindView(R.id.btn_PhotoViewer)
+    Button btnPhotoViewer;
     private Unbinder bind;
 
     @Override
@@ -60,7 +64,8 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    @OnClick({R.id.btn_android7, R.id.btn_LiveWallPaper, R.id.btn_NestedScroll, R.id.btn_RvInSV, R.id.btn_ExpandableListView})
+    @OnClick({R.id.btn_PhotoViewer,R.id.btn_android7, R.id.btn_LiveWallPaper,
+            R.id.btn_NestedScroll, R.id.btn_RvInSV, R.id.btn_ExpandableListView})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.btn_android7:
@@ -77,6 +82,13 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.btn_ExpandableListView:
                 startActivity(new Intent(this, ExpandableListActivity.class));
+                break;
+            case R.id.btn_PhotoViewer:
+                new PhotoPagerConfig.Builder(this)
+                        .setBigImageUrls(ImageProvider.getBigImgUrls())
+                        .setLowImageUrls(ImageProvider.getLowImgUrls())
+                        .setSavaImage(true)
+                        .build();
                 break;
         }
     }

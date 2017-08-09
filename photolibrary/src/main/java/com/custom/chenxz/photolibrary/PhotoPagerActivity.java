@@ -330,9 +330,9 @@ public class PhotoPagerActivity extends AppCompatActivity {
         boolean state = false;
         //通过ImageRquest对象获取到对应的gif字节数组
         CacheKey cacheKey = DefaultCacheKeyFactory.getInstance()
-                .getEncodedCacheKey(request);
+                .getEncodedCacheKey(request, null);
         BinaryResource bRes = ImagePipelineFactory.getInstance()
-                .getMainDiskStorageCache()
+                .getMainFileCache()
                 .getResource(cacheKey);
         try {
             byte[] b = bRes.read();

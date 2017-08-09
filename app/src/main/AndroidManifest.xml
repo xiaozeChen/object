@@ -9,6 +9,7 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
+        android:name=".App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -26,7 +27,9 @@
         <activity android:name=".view.NestedScrollActivity" />
         <activity android:name=".view.NestRecycleViewInScrollViewActivity" />
         <activity android:name=".view.ExpandableListActivity" />
-
+        <activity
+            android:theme="@style/PhoAppTheme.AppTheme"
+            android:name="com.custom.chenxz.photolibrary.PhotoPagerActivity" />
         <provider
             android:name="android.support.v4.content.FileProvider"
             android:authorities="${applicationId}.android7.fileprovider"
