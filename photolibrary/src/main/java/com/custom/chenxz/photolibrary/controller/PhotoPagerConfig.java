@@ -1,16 +1,23 @@
-package com.custom.chenxz.photolibrary;
+package com.custom.chenxz.photolibrary.controller;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 
 
+import com.custom.chenxz.photolibrary.ui.PhotoPagerActivity;
+import com.custom.chenxz.photolibrary.widget.PhotoViewer;
+import com.custom.chenxz.photolibrary.R;
+import com.custom.chenxz.photolibrary.data.PhotoPagerBean;
+import com.custom.chenxz.photolibrary.utils.AppPathUtil;
+
 import java.util.ArrayList;
 
 /**
  * 默认不开启保存图片功能，但是会有默认的保存图片地址,默认展示第一张图片<br>
  * 注意查看大图传本地图片路径的时候要加上scheme，既是加上这个："file://"，这样显示的效果更佳<br>
- * 可以这样使用,how to use：<br>
+ * 可以这样使用,
+ * how to use：<br>
  * <code>new PhotoPagerConfig<br>
  * .Builder(this)<br>
  * .setBigImageUrls(list)<br>
@@ -19,7 +26,7 @@ import java.util.ArrayList;
  * .setSavaImage(true)<br>
  * .setSaveImageLocalPath("/storage/xxxx/xxx")<br>
  * .build();<br></code>
- * Created by Awen <Awentljs@gmail.com>
+ * Created by PhotoViewer <Awentljs@gmail.com>
  */
 public class PhotoPagerConfig {
     public static final String EXTRA_PAGER_BUNDLE = "extra_pager_bundle";
@@ -53,7 +60,7 @@ public class PhotoPagerConfig {
         private PhotoPagerBean photoPagerBean;
 
         public Builder(Activity context) {
-            Awen.checkInit();
+            PhotoViewer.checkInit();
             if (context == null) {
                 throw new NullPointerException("activity is null");
             }
@@ -151,8 +158,8 @@ public class PhotoPagerConfig {
         }
 
         /**
-         * 你也可以不设置任何参数，除了此参数以为，{@link PhotoPagerBean}是参数配置的一个实体，你可以直接传个实体进来也可以
-         *
+         * 你也可以不设置任何参数，除了此参数以为，
+         * {@link PhotoPagerBean}是参数配置的一个实体，你可以直接传个实体进来也可以
          * @param photoPagerBean PhotoPagerBean
          * @return Builder
          */

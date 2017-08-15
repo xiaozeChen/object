@@ -1,4 +1,4 @@
-package com.custom.chenxz.photolibrary;
+package com.custom.chenxz.photolibrary.widget;
 
 import android.content.Context;
 import android.support.v4.view.ViewPager;

@@ -1,4 +1,4 @@
-package com.custom.chenxz.photolibrary;
+package com.custom.chenxz.photolibrary.widget;
 
 import android.content.Context;
 import android.support.annotation.ColorInt;
@@ -6,13 +6,11 @@ import android.support.annotation.ColorRes;
 
 import com.facebook.drawee.backends.pipeline.Fresco;
 
-/**
- * Created by Awen <Awentljs@gmail.com>
- */
 
-public final class Awen {
 
-    private Awen() {
+public final class PhotoViewer {
+
+    private PhotoViewer() {
     }
 
     @ColorRes
@@ -24,7 +22,7 @@ public final class Awen {
     private static String path;
 
     public static void init(Context context) {
-        init(context, android.R.color.holo_red_light);
+        init(context, android.R.color.transparent);
     }
 
     public static void init(Context context, @ColorRes int toolbarBackGroundId) {
@@ -41,10 +39,6 @@ public final class Awen {
         if(mContext != null){//说明已经初始化过了,不用重复初始化
             return;
         }
-        //这里用facebook提供的开源图片处理框架,详细用法可参考文档:http://www.fresco-cn.org/
-        //或者:http://blog.csdn.net/android_ls/article/details/53137867
-        //或者:http://blog.csdn.net/wa991830558/article/details/46005063
-        //或者:http://www.lxway.com/4406818246.htm
         Fresco.initialize(context, ImagePipelineConfigFactory.getImagePipelineConfig(context));
         toolbarBackGround = toolbarBackGroundId;
         mContext = context.getApplicationContext();

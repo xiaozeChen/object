@@ -1,4 +1,4 @@
-package com.custom.chenxz.photolibrary;
+package com.custom.chenxz.photolibrary.ui;
 
 import android.Manifest;
 import android.content.DialogInterface;
@@ -19,6 +19,17 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import com.custom.chenxz.photolibrary.R;
+import com.custom.chenxz.photolibrary.controller.PhotoPagerConfig;
+import com.custom.chenxz.photolibrary.data.PhotoPagerBean;
+import com.custom.chenxz.photolibrary.photodrawview.OnViewTapListener;
+import com.custom.chenxz.photolibrary.utils.AppPathUtil;
+import com.custom.chenxz.photolibrary.utils.ImageUtils;
+import com.custom.chenxz.photolibrary.utils.PermissionUtil;
+import com.custom.chenxz.photolibrary.widget.HackyViewPager;
+import com.custom.chenxz.photolibrary.widget.PhotoDraweeView;
+import com.custom.chenxz.photolibrary.widget.PhotoViewer;
+import com.custom.chenxz.photolibrary.widget.RoundProgressBar;
 import com.facebook.binaryresource.BinaryResource;
 import com.facebook.cache.common.CacheKey;
 import com.facebook.common.executors.CallerThreadExecutor;
@@ -48,9 +59,6 @@ import me.relex.circleindicator.CircleIndicator;
 
 /**
  * 图片查看器<br>
- * 后期会继续添加视频播放
- *
- * @author Homk-M <Awentljs@gmail.com>
  */
 public class PhotoPagerActivity extends AppCompatActivity {
     private static final String TAG = PhotoPagerActivity.class.getSimpleName();
@@ -263,7 +271,7 @@ public class PhotoPagerActivity extends AppCompatActivity {
             //防止有些图片没有后缀名
             fileName = fileName + ".jpg";
         }
-        String filePath = (Awen.getSaveImageLocalPath() == null ? AppPathUtil.getBigBitmapCachePath() : Awen.getSaveImageLocalPath()) + fileName;
+        String filePath = (PhotoViewer.getSaveImageLocalPath() == null ? AppPathUtil.getBigBitmapCachePath() : PhotoViewer.getSaveImageLocalPath()) + fileName;
         if (saveImageLocalPath != null) {
             filePath = saveImageLocalPath + fileName;
         }

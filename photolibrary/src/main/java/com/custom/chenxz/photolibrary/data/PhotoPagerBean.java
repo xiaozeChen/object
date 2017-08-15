@@ -1,4 +1,4 @@
-package com.custom.chenxz.photolibrary;
+package com.custom.chenxz.photolibrary.data;
 
 import android.os.Parcel;
 import android.os.Parcelable;
@@ -6,7 +6,7 @@ import android.os.Parcelable;
 import java.util.ArrayList;
 
 /**
- * Created by Awen <Awentljs@gmail.com>.
+ * Created by PhotoViewer <Awentljs@gmail.com>.
  */
 public class PhotoPagerBean implements Parcelable {
 

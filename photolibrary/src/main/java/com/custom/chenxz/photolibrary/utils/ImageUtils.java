@@ -1,16 +1,18 @@
-package com.custom.chenxz.photolibrary;
+package com.custom.chenxz.photolibrary.utils;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 
+import com.custom.chenxz.photolibrary.widget.PhotoViewer;
+
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
 /**
- * Created by Awen <Awentljs@gmail.com>
+ * Created by PhotoViewer <Awentljs@gmail.com>
  */
 public class ImageUtils {
 
@@ -124,7 +126,7 @@ public class ImageUtils {
                 Intent intent = new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE);
                 Uri uri = Uri.fromFile(file);
                 intent.setData(uri);
-                Awen.getContext().sendBroadcast(intent);
+                PhotoViewer.getContext().sendBroadcast(intent);
                 isSuccesse = true;
             } catch (Exception e1) {
                 e1.printStackTrace();
@@ -176,7 +178,7 @@ public class ImageUtils {
                 Intent intent = new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE);
                 Uri uri = Uri.fromFile(file);
                 intent.setData(uri);
-                Awen.getContext().sendBroadcast(intent);
+                PhotoViewer.getContext().sendBroadcast(intent);
                 isSuccesse = true;
             } catch (Exception e1) {
                 e1.printStackTrace();

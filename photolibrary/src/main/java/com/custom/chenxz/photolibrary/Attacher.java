@@ -15,6 +15,13 @@ import android.view.ViewParent;
 import android.view.animation.AccelerateDecelerateInterpolator;
 import android.view.animation.Interpolator;
 
+import com.custom.chenxz.photolibrary.photodrawview.DefaultOnDoubleTapListener;
+import com.custom.chenxz.photolibrary.photodrawview.IAttacher;
+import com.custom.chenxz.photolibrary.photodrawview.OnPhotoTapListener;
+import com.custom.chenxz.photolibrary.photodrawview.OnScaleChangeListener;
+import com.custom.chenxz.photolibrary.photodrawview.OnScaleDragGestureListener;
+import com.custom.chenxz.photolibrary.photodrawview.OnViewTapListener;
+import com.custom.chenxz.photolibrary.photodrawview.ScaleDragDetector;
 import com.facebook.drawee.drawable.ScalingUtils;
 import com.facebook.drawee.generic.GenericDraweeHierarchy;
 import com.facebook.drawee.view.DraweeView;
@@ -535,7 +542,7 @@ public class Attacher implements IAttacher, View.OnTouchListener, OnScaleDragGes
         }
     }
 
-    protected void onDetachedFromWindow() {
+    public void onDetachedFromWindow() {
         cancelFling();
     }
 }

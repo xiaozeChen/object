@@ -10,7 +10,7 @@
  * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package com.custom.chenxz.photolibrary;
+package com.custom.chenxz.photolibrary.widget;
 
 
 import android.content.Context;
@@ -56,19 +56,6 @@ public class ImagePipelineConfigFactory {
         return sImagePipelineConfig;
     }
 
-    /**
-     * Creates config using OkHttp as network backed.
-     */
-/*  public static ImagePipelineConfig getOkHttpImagePipelineConfig(Context context) {
-    if (sOkHttpImagePipelineConfig == null) {
-      OkHttpClient okHttpClient = new OkHttpClient();
-      ImagePipelineConfig.Builder configBuilder =
-        OkHttpImagePipelineConfigFactory.newBuilder(context, okHttpClient);
-      configureCaches(configBuilder, context);
-      sOkHttpImagePipelineConfig = configBuilder.build();
-    }
-    return sOkHttpImagePipelineConfig;
-  }*/
 
     /**
      * Configures disk and memory cache not to exceed common limits

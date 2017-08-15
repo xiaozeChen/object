@@ -17,7 +17,7 @@ import com.custom.chenxz.object.view.ExpandableListActivity;
 import com.custom.chenxz.object.view.NestRecycleViewInScrollViewActivity;
 import com.custom.chenxz.object.view.NestedScrollActivity;
 import com.custom.chenxz.object.view.TakePhotoActivity;
-import com.custom.chenxz.photolibrary.PhotoPagerConfig;
+import com.custom.chenxz.photolibrary.controller.PhotoPagerConfig;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

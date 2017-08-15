@@ -1,4 +1,4 @@
-package com.custom.chenxz.photolibrary;
+package com.custom.chenxz.photolibrary.photodrawview;
 
 /**
  * Interface definition for callback to be invoked when attached ImageView scale changes

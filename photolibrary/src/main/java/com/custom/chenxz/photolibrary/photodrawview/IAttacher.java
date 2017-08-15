@@ -1,4 +1,4 @@
-package com.custom.chenxz.photolibrary;
+package com.custom.chenxz.photolibrary.photodrawview;
 
 import android.view.GestureDetector;
 import android.view.View;
@@ -23,10 +23,10 @@ import android.view.View;
 
 public interface IAttacher {
 
-    public static final float DEFAULT_MAX_SCALE = 3.0f;
-    public static final float DEFAULT_MID_SCALE = 1.75f;
-    public static final float DEFAULT_MIN_SCALE = 1.0f;
-    public static final long ZOOM_DURATION = 200L;
+    float DEFAULT_MAX_SCALE = 3.0f;
+    float DEFAULT_MID_SCALE = 1.75f;
+    float DEFAULT_MIN_SCALE = 1.0f;
+    long ZOOM_DURATION = 200L;
 
     float getMinimumScale();
 

@@ -1,9 +1,10 @@
-package com.custom.chenxz.photolibrary;
+package com.custom.chenxz.photolibrary.photodrawview;
 
 import android.graphics.RectF;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 
+import com.custom.chenxz.photolibrary.Attacher;
 import com.facebook.drawee.generic.GenericDraweeHierarchy;
 import com.facebook.drawee.view.DraweeView;
 

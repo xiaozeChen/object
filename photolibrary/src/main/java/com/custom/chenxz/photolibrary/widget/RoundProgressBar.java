@@ -1,4 +1,4 @@
-package com.custom.chenxz.photolibrary;
+package com.custom.chenxz.photolibrary.widget;
 
 import android.graphics.Canvas;
 import android.graphics.ColorFilter;
@@ -114,8 +114,6 @@ public class RoundProgressBar extends Drawable {
             if (percent != 0) {
                 canvas.drawText(percent + "%", mXCenter - textWidth / 2, mYCenter + textSize / 2, paint); // 画出进度百分比
             }
-//            Log.e(TAG,"percent = " + percent);
-//            Log.e(TAG,"x = " + (mXCenter - textWidth / 2));
         }
     }
 

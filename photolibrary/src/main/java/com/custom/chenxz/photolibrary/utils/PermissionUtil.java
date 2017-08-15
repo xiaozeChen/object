@@ -1,4 +1,4 @@
-package com.custom.chenxz.photolibrary;
+package com.custom.chenxz.photolibrary.utils;
 
 import android.app.Activity;
 import android.content.DialogInterface;
@@ -11,9 +11,11 @@ import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AlertDialog;
 
+import com.custom.chenxz.photolibrary.R;
+
 
 /**
- * Created by Awen <Awentljs@gmail.com>
+ * Created by PhotoViewer <Awentljs@gmail.com>
  */
 public class PermissionUtil {
 

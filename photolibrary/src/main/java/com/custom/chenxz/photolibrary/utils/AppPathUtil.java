@@ -1,12 +1,15 @@
-package com.custom.chenxz.photolibrary;
+package com.custom.chenxz.photolibrary.utils;
 
 import android.os.Environment;
 import android.text.TextUtils;
 
+import com.custom.chenxz.photolibrary.widget.PhotoViewer;
+import com.custom.chenxz.photolibrary.R;
+
 import java.io.File;
 
 /**
- * Created by Awen <Awentljs@gmail.com>
+ * Created by PhotoViewer <Awentljs@gmail.com>
  */
 public class AppPathUtil {
 
@@ -34,10 +37,10 @@ public class AppPathUtil {
             path = Environment.getExternalStorageDirectory().getPath();
         }
         if (TextUtils.isEmpty(path)) {
-            path = Awen.getContext().getCacheDir().getPath();
+            path = PhotoViewer.getContext().getCacheDir().getPath();
         }
         //地址如下:path/appname/appname_photo/
-        String app_root_name = Awen.getContext().getString(R.string.app_name);
+        String app_root_name = PhotoViewer.getContext().getString(R.string.app_name);
         path = path + "/" + app_root_name + "/" + app_root_name + "_" + str + "/";
         exitesFolder(path);
         return path;
