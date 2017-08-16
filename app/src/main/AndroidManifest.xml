@@ -28,8 +28,9 @@
         <activity android:name=".view.NestRecycleViewInScrollViewActivity" />
         <activity android:name=".view.ExpandableListActivity" />
         <activity
-            android:theme="@style/PhoAppTheme.AppTheme"
-            android:name="com.custom.chenxz.photolibrary.ui.PhotoPagerActivity" />
+            android:name="com.custom.chenxz.photolibrary.ui.PhotoPagerActivity"
+            android:theme="@style/PhoAppTheme.AppTheme" />
+
         <provider
             android:name="android.support.v4.content.FileProvider"
             android:authorities="${applicationId}.android7.fileprovider"
@@ -39,6 +40,7 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_paths" />
         </provider>
+
         <service
             android:name=".server.VideoLiveWallpaper"
             android:label="@string/app_name"
@@ -47,10 +49,13 @@
             <intent-filter>
                 <action android:name="android.service.wallpaper.WallpaperService" />
             </intent-filter>
+
             <meta-data
                 android:name="android.service.wallpaper"
                 android:resource="@xml/livewallpaper" />
         </service>
+
+        <activity android:name=".view.FlowActivity" />
     </application>
 
 </manifest>

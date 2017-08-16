@@ -57,6 +57,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="PhotoViewer" />
+
+        <Button
+            android:id="@+id/btn_FlowTab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="FlowTab" />
     </LinearLayout>
 
 </ScrollView>
