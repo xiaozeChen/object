@@ -9,4 +9,7 @@
             <enum name="right" value="1" />
         </attr>
     </declare-styleable>
+    <declare-styleable name="ColourImageView">
+        <attr name="border_color" format="color|reference"></attr>
+    </declare-styleable>
 </resources>

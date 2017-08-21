@@ -63,6 +63,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="FlowTab" />
+
+        <Button
+            android:id="@+id/btn_ColorImageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ColorImageView" />
     </LinearLayout>
 
 </ScrollView>

@@ -30,6 +30,16 @@ public class ListViewTestFragment extends Fragment {
     private List<List<String>> mDatas = new ArrayList<List<String>>();
     private ListView mListView;
 
+    private void initDatas() {
+        for (int i = 'A'; i < 'z'; i++) {
+            List<String> itemData = new ArrayList<String>(3);
+            for (int j = 0; j < 3; j++) {
+                itemData.add((char) i + "");
+            }
+            mDatas.add(itemData);
+        }
+    }
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -73,15 +83,5 @@ public class ListViewTestFragment extends Fragment {
         };
         mListView.setAdapter(commonAdapter);
 
-    }
-
-    private void initDatas() {
-        for (int i = 'A'; i < 'z'; i++) {
-            List<String> itemData = new ArrayList<String>(3);
-            for (int j = 0; j < 3; j++) {
-                itemData.add((char) i + "");
-            }
-            mDatas.add(itemData);
-        }
     }
 }

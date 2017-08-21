@@ -13,6 +13,7 @@ import android.widget.CompoundButton;
 
 import com.custom.chenxz.object.databean.ImageProvider;
 import com.custom.chenxz.object.server.VideoLiveWallpaper;
+import com.custom.chenxz.object.view.ColorViewActivity;
 import com.custom.chenxz.object.view.ExpandableListActivity;
 import com.custom.chenxz.object.view.FlowActivity;
 import com.custom.chenxz.object.view.NestRecycleViewInScrollViewActivity;
@@ -68,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @OnClick({R.id.btn_PhotoViewer, R.id.btn_android7, R.id.btn_LiveWallPaper,
-            R.id.btn_NestedScroll, R.id.btn_RvInSV, R.id.btn_ExpandableListView, R.id.btn_FlowTab})
+            R.id.btn_NestedScroll, R.id.btn_RvInSV, R.id.btn_ExpandableListView, R.id.btn_FlowTab, R.id.btn_ColorImageView})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.btn_android7:
@@ -88,6 +89,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.btn_FlowTab:
                 startActivity(new Intent(this, FlowActivity.class));
+                break;
+            case R.id.btn_ColorImageView:
+                startActivity(new Intent(this, ColorViewActivity.class));
                 break;
             case R.id.btn_PhotoViewer:
                 new PhotoPagerConfig.Builder(this)
