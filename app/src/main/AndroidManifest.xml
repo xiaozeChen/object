@@ -15,22 +15,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".view.TakePhotoActivity" />
-        <activity android:name=".view.NestedScrollActivity" />
-        <activity android:name=".view.NestRecycleViewInScrollViewActivity" />
-        <activity android:name=".view.ExpandableListActivity" />
-        <activity
-            android:name="com.custom.chenxz.photolibrary.ui.PhotoPagerActivity"
-            android:theme="@style/PhoAppTheme.AppTheme" />
-
+        android:theme="@style/AppTheme">
         <provider
             android:name="android.support.v4.content.FileProvider"
             android:authorities="${applicationId}.android7.fileprovider"
@@ -55,6 +40,21 @@
                 android:resource="@xml/livewallpaper" />
         </service>
 
+        <activity android:name=".view.NavigationDrawerActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".view.TakePhotoActivity" />
+        <activity android:name=".view.NestedScrollActivity" />
+        <activity android:name=".view.NestRecycleViewInScrollViewActivity" />
+        <activity android:name=".view.ExpandableListActivity" />
+        <activity
+            android:name="com.custom.chenxz.photolibrary.ui.PhotoPagerActivity"
+            android:theme="@style/PhoAppTheme.AppTheme" />
         <activity android:name=".view.FlowActivity" />
         <activity android:name=".view.ColorViewActivity" />
     </application>

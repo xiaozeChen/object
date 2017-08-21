@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.custom.chenxz.object.view.NavigationDrawerActivity"
+    tools:showIn="@layout/app_bar_navigation_drawer">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="8dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btn_android7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Android7.0 Camera" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/cb_voice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="静音" />
+
+                <Button
+                    android:id="@+id/btn_LiveWallPaper"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="LiveWallPaper" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_NestedScroll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="NestedScroll" />
+
+            <Button
+                android:id="@+id/btn_RvInSV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="RvInSV" />
+
+            <Button
+                android:id="@+id/btn_ExpandableListView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ExpandableListView" />
+
+            <Button
+                android:id="@+id/btn_PhotoViewer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="PhotoViewer" />
+
+            <Button
+                android:id="@+id/btn_FlowTab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="FlowTab" />
+
+            <Button
+                android:id="@+id/btn_ColorImageView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ColorImageView" />
+
+
+        </LinearLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>
