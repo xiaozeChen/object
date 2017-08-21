@@ -12,4 +12,9 @@
     <declare-styleable name="ColourImageView">
         <attr name="border_color" format="color|reference"></attr>
     </declare-styleable>
+    <attr name="item_count" format="integer"></attr>
+
+    <declare-styleable name="ViewPagerIndicator">
+        <attr name="item_count" />
+    </declare-styleable>
 </resources>

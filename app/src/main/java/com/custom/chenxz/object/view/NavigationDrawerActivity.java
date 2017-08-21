@@ -58,6 +58,8 @@ public class NavigationDrawerActivity extends AppCompatActivity implements Navig
     NavigationView navView;
     @BindView(R.id.drawer_layout)
     DrawerLayout drawerLayout;
+    @BindView(R.id.btn_CustomViewPager)
+    Button btnCustomViewPager;
     private Unbinder bind;
 
     @Override
@@ -144,7 +146,7 @@ public class NavigationDrawerActivity extends AppCompatActivity implements Navig
         return true;
     }
 
-    @OnClick({R.id.btn_PhotoViewer, R.id.btn_android7, R.id.btn_LiveWallPaper, R.id.fab,
+    @OnClick({R.id.btn_PhotoViewer, R.id.btn_android7, R.id.btn_LiveWallPaper, R.id.fab, R.id.btn_CustomViewPager,
             R.id.btn_NestedScroll, R.id.btn_RvInSV, R.id.btn_ExpandableListView, R.id.btn_FlowTab, R.id.btn_ColorImageView})
     public void onViewClicked(View view) {
         switch (view.getId()) {
@@ -172,6 +174,8 @@ public class NavigationDrawerActivity extends AppCompatActivity implements Navig
                 break;
             case R.id.btn_ColorImageView:
                 startActivity(new Intent(this, ColorViewActivity.class));
+            case R.id.btn_CustomViewPager:
+                startActivity(new Intent(this, CustomFragmentActivity.class));
                 break;
             case R.id.btn_PhotoViewer:
                 new PhotoPagerConfig.Builder(this)

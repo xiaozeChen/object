@@ -57,6 +57,7 @@
             android:theme="@style/PhoAppTheme.AppTheme" />
         <activity android:name=".view.FlowActivity" />
         <activity android:name=".view.ColorViewActivity" />
+        <activity android:name=".view.CustomFragmentActivity" />
     </application>
 
 </manifest>

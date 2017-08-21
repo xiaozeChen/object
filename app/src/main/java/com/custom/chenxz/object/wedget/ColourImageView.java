@@ -12,7 +12,7 @@ import android.view.MotionEvent;
 import android.widget.ImageView;
 
 import com.custom.chenxz.object.R;
-import com.custom.chenxz.object.utils.L;
+import com.custom.chenxz.object.utils.apputils.LogUtils;
 
 import java.util.Random;
 import java.util.Stack;
@@ -38,7 +38,7 @@ public class ColourImageView extends ImageView {
         mBorderColor = ta.getColor(R.styleable.ColourImageView_border_color, -1);
         hasBorderColor = (mBorderColor != -1);
 
-        L.e("hasBorderColor = " + hasBorderColor + " , mBorderColor = " + mBorderColor);
+        LogUtils.e("hasBorderColor = " + hasBorderColor + " , mBorderColor = " + mBorderColor);
 
         ta.recycle();
 
@@ -54,7 +54,7 @@ public class ColourImageView extends ImageView {
         //以宽度为标准，等比例缩放view的高度
         setMeasuredDimension(viewWidth,
                 getDrawable().getIntrinsicHeight() * viewWidth / getDrawable().getIntrinsicWidth());
-        L.e("view's width = " + getMeasuredWidth() + " , view's height = " + getMeasuredHeight());
+        LogUtils.e("view's width = " + getMeasuredWidth() + " , view's height = " + getMeasuredHeight());
 
         //根据drawable，去得到一个和view一样大小的bitmap
         BitmapDrawable drawable = (BitmapDrawable) getDrawable();
@@ -129,7 +129,7 @@ public class ColourImageView extends ImageView {
              * 直到边界。分别标记区段的左、右端点坐标为xLeft和xRight；
              */
             Point seed = mStacks.pop();
-            //L.e("seed = " + seed.x + " , seed = " + seed.y);
+            //LogUtils.e("seed = " + seed.x + " , seed = " + seed.y);
             int count = fillLineLeft(pixels, pixel, w, h, newColor, seed.x, seed.y);
             int left = seed.x - count + 1;
             count = fillLineRight(pixels, pixel, w, h, newColor, seed.x + 1, seed.y);
