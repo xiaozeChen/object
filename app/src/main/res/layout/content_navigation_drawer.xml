@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.custom.chenxz.object.view.NavigationDrawerActivity"
+    tools:context="com.custom.chenxz.object.view.MainActivity"
     tools:showIn="@layout/app_bar_navigation_drawer">
 
     <ScrollView
@@ -94,6 +94,18 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="CustomViewPager" />
+
+            <Button
+                android:id="@+id/btn_ColorPicker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ColorPicker" />
+
+            <Button
+                android:id="@+id/btn_CustomDragView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CustomDragView" />
 
 
         </LinearLayout>

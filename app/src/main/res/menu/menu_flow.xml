@@ -3,8 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.custom.chenxz.object.view.FlowActivity">
     <item
-        android:id="@+id/action_settings"
+        android:id="@+id/action_search"
+        android:icon="@drawable/ic_search_black_24dp"
         android:orderInCategory="100"
-        android:title="@string/action_settings"
-        app:showAsAction="never" />
+        android:tint="@android:color/white"
+        android:title="搜索"
+        app:showAsAction="always"/>
 </menu>

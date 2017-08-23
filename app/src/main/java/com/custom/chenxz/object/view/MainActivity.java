@@ -12,6 +12,7 @@ import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -19,10 +20,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 import com.custom.chenxz.object.R;
 import com.custom.chenxz.object.databean.ImageProvider;
 import com.custom.chenxz.object.server.VideoLiveWallpaper;
+import com.custom.chenxz.object.utils.SearchViewUtils;
 import com.custom.chenxz.photolibrary.controller.PhotoPagerConfig;
 
 import butterknife.BindView;
@@ -30,7 +35,7 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 import butterknife.Unbinder;
 
-public class NavigationDrawerActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     @BindView(R.id.toolbar)
     Toolbar toolbar;
@@ -60,6 +65,22 @@ public class NavigationDrawerActivity extends AppCompatActivity implements Navig
     DrawerLayout drawerLayout;
     @BindView(R.id.btn_CustomViewPager)
     Button btnCustomViewPager;
+    @BindView(R.id.btn_ColorPicker)
+    Button btnColorPicker;
+    @BindView(R.id.iv_search_back)
+    ImageView ivSearchBack;
+    @BindView(R.id.et_search)
+    EditText etSearch;
+    @BindView(R.id.clearSearch)
+    ImageView clearSearch;
+    @BindView(R.id.search_layout)
+    LinearLayout searchLayout;
+    @BindView(R.id.recycleview)
+    View recycleview;
+    @BindView(R.id.cardView_search)
+    CardView cardViewSearch;
+    @BindView(R.id.btn_CustomDragView)
+    Button btnCustomDragView;
     private Unbinder bind;
 
     @Override
@@ -72,6 +93,13 @@ public class NavigationDrawerActivity extends AppCompatActivity implements Navig
         initView();
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        toolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                SearchViewUtils.handleToolBar(getApplicationContext(), cardViewSearch, etSearch);
+                return true;
+            }
+        });
         drawerLayout.setDrawerListener(toggle);
         toggle.syncState();
         navView.setNavigationItemSelectedListener(this);
@@ -103,24 +131,8 @@ public class NavigationDrawerActivity extends AppCompatActivity implements Navig
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.navigation_drawer, menu);
+        getMenuInflater().inflate(R.menu.menu_flow, menu);
         return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
     }
 
     @SuppressWarnings("StatementWithEmptyBody")
@@ -146,13 +158,17 @@ public class NavigationDrawerActivity extends AppCompatActivity implements Navig
         return true;
     }
 
-    @OnClick({R.id.btn_PhotoViewer, R.id.btn_android7, R.id.btn_LiveWallPaper, R.id.fab, R.id.btn_CustomViewPager,
+    @OnClick({R.id.btn_PhotoViewer, R.id.btn_android7, R.id.btn_LiveWallPaper, R.id.fab, R.id.btn_CustomDragView,
+            R.id.btn_CustomViewPager, R.id.btn_ColorPicker, R.id.iv_search_back,
             R.id.btn_NestedScroll, R.id.btn_RvInSV, R.id.btn_ExpandableListView, R.id.btn_FlowTab, R.id.btn_ColorImageView})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.fab:
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
+                break;
+            case R.id.iv_search_back:
+                SearchViewUtils.handleToolBar(getApplicationContext(), cardViewSearch, etSearch);
                 break;
             case R.id.btn_android7:
                 startActivity(new Intent(this, TakePhotoActivity.class));
@@ -176,6 +192,12 @@ public class NavigationDrawerActivity extends AppCompatActivity implements Navig
                 startActivity(new Intent(this, ColorViewActivity.class));
             case R.id.btn_CustomViewPager:
                 startActivity(new Intent(this, CustomFragmentActivity.class));
+                break;
+            case R.id.btn_ColorPicker:
+                startActivity(new Intent(this, ColorPickerActivity.class));
+                break;
+            case R.id.btn_CustomDragView:
+                startActivity(new Intent(this, DragViewActivity.class));
                 break;
             case R.id.btn_PhotoViewer:
                 new PhotoPagerConfig.Builder(this)

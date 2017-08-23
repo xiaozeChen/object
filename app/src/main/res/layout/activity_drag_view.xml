@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.custom.chenxz.object.wedget.CustomDragViewLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/md_light_green_50">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/zhixiangshu"
+            android:textColor="@color/md_blue_grey_700"
+            android:textSize="18sp" />
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/md_light_blue_100"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="图片展示"
+            android:textColor="@color/md_grey_900"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/zhixiangshu" />
+    </LinearLayout>
+</com.custom.chenxz.object.wedget.CustomDragViewLayout>

@@ -11,4 +11,13 @@
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="title_activity_color_picker">ColorPickerActivity</string>
+    <string name="title_activity_drag_view">DragViewActivity</string>
+    <string name="zhixiangshu">《致橡树》\n舒婷 \n我如果爱你——\n绝不像攀援的凌霄花，\n借你的高枝炫耀自己；
+        \n我如果爱你——\n绝不学痴情的鸟儿，\n为绿荫重复单调的歌曲；
+        \n也不止像泉源，\n常年送来清凉的慰藉；\n也不止像险峰，\n增加你的高度，\n衬托你的威仪。\n甚至日光。\n甚至春雨。
+        \n不，这些都还不够！\n我必须是你近旁的一株木棉，\n做为树的形象和你站在一起。\n根，紧握在地下，\n叶，相触在云里。
+        \n每一阵风过，\n我们都互相致意，\n但没有人\n听懂我们的言语。\n你有你的铜枝铁干，\n像刀，像剑，\n也像戟，
+        \n我有我的红硕花朵，\n像沉重的叹息，\n又像英勇的火炬，\n我们分担寒潮、风雷、霹雳；\n我们共享雾霭、流岚、虹霓，
+  \n 仿佛永远分离，\n却又终身相依，\n这才是伟大的爱情，\n坚贞就在这里：\n爱——\n不仅爱你伟岸的身躯，\n也爱你坚持的位置，\n脚下的土地。</string>
 </resources>

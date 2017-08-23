@@ -40,14 +40,13 @@
                 android:resource="@xml/livewallpaper" />
         </service>
 
-        <activity android:name=".view.NavigationDrawerActivity">
+        <activity android:name=".view.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity android:name=".view.TakePhotoActivity" />
         <activity android:name=".view.NestedScrollActivity" />
         <activity android:name=".view.NestRecycleViewInScrollViewActivity" />
@@ -58,6 +57,10 @@
         <activity android:name=".view.FlowActivity" />
         <activity android:name=".view.ColorViewActivity" />
         <activity android:name=".view.CustomFragmentActivity" />
+        <activity android:name=".view.ColorPickerActivity" />
+        <activity
+            android:name=".view.DragViewActivity"
+            android:label="@string/title_activity_drag_view"></activity>
     </application>
 
 </manifest>
