@@ -81,6 +81,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     CardView cardViewSearch;
     @BindView(R.id.btn_CustomDragView)
     Button btnCustomDragView;
+    @BindView(R.id.btn_IjkPlayer)
+    Button btnIjkPlayer;
     private Unbinder bind;
 
     @Override
@@ -159,7 +161,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
 
     @OnClick({R.id.btn_PhotoViewer, R.id.btn_android7, R.id.btn_LiveWallPaper, R.id.fab, R.id.btn_CustomDragView,
-            R.id.btn_CustomViewPager, R.id.btn_ColorPicker, R.id.iv_search_back,
+            R.id.btn_CustomViewPager, R.id.btn_ColorPicker, R.id.iv_search_back, R.id.btn_IjkPlayer,
             R.id.btn_NestedScroll, R.id.btn_RvInSV, R.id.btn_ExpandableListView, R.id.btn_FlowTab, R.id.btn_ColorImageView})
     public void onViewClicked(View view) {
         switch (view.getId()) {
@@ -198,6 +200,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 break;
             case R.id.btn_CustomDragView:
                 startActivity(new Intent(this, DragViewActivity.class));
+            case R.id.btn_IjkPlayer:
+                startActivity(new Intent(this, IjkPlayerActivity.class));
                 break;
             case R.id.btn_PhotoViewer:
                 new PhotoPagerConfig.Builder(this)
