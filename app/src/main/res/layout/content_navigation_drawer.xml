@@ -113,6 +113,18 @@
                 android:layout_height="wrap_content"
                 android:text="IjkPlayer" />
 
+            <Button
+                android:id="@+id/btn_ShortHelper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ShortHelper" />
+
+            <Button
+                android:id="@+id/btn_IDValidator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="IDValidator" />
+
 
         </LinearLayout>
     </ScrollView>
