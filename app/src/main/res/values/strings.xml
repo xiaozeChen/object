@@ -22,4 +22,5 @@
   \n 仿佛永远分离，\n却又终身相依，\n这才是伟大的爱情，\n坚贞就在这里：\n爱——\n不仅爱你伟岸的身躯，\n也爱你坚持的位置，\n脚下的土地。</string>
     <string name="title_activity_ijk_player">IjkPlayerActivity</string>
     <string name="title_activity_idvalidator">IDValidatorActivity</string>
+    <string name="title_activity_we_chat_image_view">WeChatImageViewActivity</string>
 </resources>

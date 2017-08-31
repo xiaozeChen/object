@@ -87,6 +87,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     Button btnShortHelper;
     @BindView(R.id.btn_IDValidator)
     Button btnIDValidator;
+    @BindView(R.id.btn_WeChatImageView)
+    Button btnWeChatImageView;
     private Unbinder bind;
 
     @Override
@@ -165,7 +167,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
 
     @OnClick({R.id.btn_PhotoViewer, R.id.btn_android7, R.id.btn_LiveWallPaper, R.id.fab, R.id.btn_CustomDragView, R.id.btn_IDValidator,
-            R.id.btn_CustomViewPager, R.id.btn_ColorPicker, R.id.iv_search_back, R.id.btn_IjkPlayer, R.id.btn_ShortHelper,
+            R.id.btn_CustomViewPager, R.id.btn_ColorPicker, R.id.iv_search_back, R.id.btn_IjkPlayer, R.id.btn_ShortHelper, R.id.btn_WeChatImageView,
             R.id.btn_NestedScroll, R.id.btn_RvInSV, R.id.btn_ExpandableListView, R.id.btn_FlowTab, R.id.btn_ColorImageView})
     public void onViewClicked(View view) {
         switch (view.getId()) {
@@ -211,6 +213,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 break;
             case R.id.btn_IDValidator:
                 startActivity(new Intent(this, IDValidatorActivity.class));
+            case R.id.btn_WeChatImageView:
+                startActivity(new Intent(this, WeChatImageViewActivity.class));
                 break;
             case R.id.btn_PhotoViewer:
                 new PhotoPagerConfig.Builder(this)

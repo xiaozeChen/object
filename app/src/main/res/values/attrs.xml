@@ -17,4 +17,10 @@
     <declare-styleable name="ViewPagerIndicator">
         <attr name="item_count" />
     </declare-styleable>
+
+    <declare-styleable name="WeChatImageView">
+        <attr name="direction_left" format="boolean" />
+        <attr name="distance_PaddingLeft" format="dimension" />
+        <attr name="distance_MarginTop" format="dimension" />
+    </declare-styleable>
 </resources>
