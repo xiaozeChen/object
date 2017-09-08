@@ -23,4 +23,12 @@
         <attr name="distance_PaddingLeft" format="dimension" />
         <attr name="distance_MarginTop" format="dimension" />
     </declare-styleable>
+    <declare-styleable name="WireWalkingDownloadingView">
+        <attr name="arrow_color" format="color" />
+        <attr name="loading_circle_back_color" format="color" />
+        <attr name="loading_line_color" format="color" />
+        <attr name="progress_line_color" format="color" />
+        <attr name="progress_text_color" format="color" />
+        <attr name="done_text_color" format="color" />
+    </declare-styleable>
 </resources>

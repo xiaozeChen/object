@@ -23,4 +23,10 @@
     <string name="title_activity_ijk_player">IjkPlayerActivity</string>
     <string name="title_activity_idvalidator">IDValidatorActivity</string>
     <string name="title_activity_we_chat_image_view">WeChatImageViewActivity</string>
+
+    <string name="show_success_loading">show success loading</string>
+    <string name="show_failed_loading">show failed loading</string>
+    <string name="show_custom_property_loading">show custom property loading</string>
+    <string name="title_activity_wire_walking_downloading">WireWalkingDownloadingActivity</string>
+
 </resources>

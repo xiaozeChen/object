@@ -77,7 +77,10 @@
             android:label="@string/title_activity_idvalidator" />
         <activity
             android:name=".view.WeChatImageViewActivity"
-            android:label="@string/title_activity_we_chat_image_view"></activity>
+            android:label="@string/title_activity_we_chat_image_view" />
+        <activity
+            android:name=".view.WireWalkingDownloadingActivity"
+            android:label="@string/title_activity_wire_walking_downloading"></activity>
     </application>
 
 </manifest>
