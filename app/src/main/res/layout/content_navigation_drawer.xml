@@ -137,6 +137,12 @@
                 android:layout_height="wrap_content"
                 android:text="WireWalkingDownloadingView" />
 
+            <Button
+                android:id="@+id/btn_MoireView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="MoireView" />
+
 
         </LinearLayout>
     </ScrollView>

@@ -80,7 +80,10 @@
             android:label="@string/title_activity_we_chat_image_view" />
         <activity
             android:name=".view.WireWalkingDownloadingActivity"
-            android:label="@string/title_activity_wire_walking_downloading"></activity>
+            android:label="@string/title_activity_wire_walking_downloading" />
+        <activity
+            android:name=".view.MoireViewActivity"
+            android:label="@string/title_activity_moire_view"></activity>
     </application>
 
 </manifest>

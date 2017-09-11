@@ -28,5 +28,6 @@
     <string name="show_failed_loading">show failed loading</string>
     <string name="show_custom_property_loading">show custom property loading</string>
     <string name="title_activity_wire_walking_downloading">WireWalkingDownloadingActivity</string>
+    <string name="title_activity_moire_view">MoireViewActivity</string>
 
 </resources>
