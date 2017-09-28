@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/ijkplayer/ijkplayer.iml" filepath="$PROJECT_DIR$/ijkplayer/ijkplayer.iml" />
       <module fileurl="file://$PROJECT_DIR$/object.iml" filepath="$PROJECT_DIR$/object.iml" />
+      <module fileurl="file://$PROJECT_DIR$/overflow/overflow.iml" filepath="$PROJECT_DIR$/overflow/overflow.iml" />
       <module fileurl="file://$PROJECT_DIR$/photolibrary/photolibrary.iml" filepath="$PROJECT_DIR$/photolibrary/photolibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/shortcut_lib/shortcut_lib.iml" filepath="$PROJECT_DIR$/shortcut_lib/shortcut_lib.iml" />
     </modules>

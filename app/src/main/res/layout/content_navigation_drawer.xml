@@ -149,6 +149,18 @@
                 android:layout_height="wrap_content"
                 android:text="SaleProgressBar" />
 
+            <Button
+                android:id="@+id/btn_coverFlow1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CoverFlow1" />
+
+            <Button
+                android:id="@+id/btn_test"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Test" />
+
 
         </LinearLayout>
     </ScrollView>

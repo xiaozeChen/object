@@ -86,7 +86,10 @@
             android:label="@string/title_activity_moire_view" />
         <activity
             android:name=".view.SaleProgressViewActivity"
-            android:label="@string/title_activity_sale_progress_view"></activity>
+            android:label="@string/title_activity_sale_progress_view" />
+        <activity
+            android:name=".view.CoverFlowActivity"
+            android:label="@string/title_activity_cover_flow_actiivity"></activity>
     </application>
 
 </manifest>

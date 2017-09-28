@@ -95,6 +95,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     Button btnMoireView;
     @BindView(R.id.btn_SaleProgressBar)
     Button btnSaleProgressBar;
+    @BindView(R.id.btn_coverFlow1)
+    Button btnCoverFlow1;
+    @BindView(R.id.btn_test)
+    Button btnTest;
     private Unbinder bind;
 
     @Override
@@ -176,7 +180,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             R.id.btn_CustomDragView, R.id.btn_IDValidator, R.id.btn_WireWalkingDownloading,
             R.id.btn_CustomViewPager, R.id.btn_ColorPicker, R.id.iv_search_back, R.id.btn_IjkPlayer,
             R.id.btn_ShortHelper, R.id.btn_WeChatImageView, R.id.btn_MoireView,
-            R.id.btn_NestedScroll, R.id.btn_RvInSV,
+            R.id.btn_NestedScroll, R.id.btn_RvInSV,R.id.btn_coverFlow1,R.id.btn_test,
             R.id.btn_ExpandableListView, R.id.btn_FlowTab, R.id.btn_ColorImageView})
     public void onViewClicked(View view) {
         switch (view.getId()) {
@@ -233,6 +237,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 break;
             case R.id.btn_SaleProgressBar:
                 startActivity(new Intent(this, SaleProgressViewActivity.class));
+                break;
+            case R.id.btn_coverFlow1:
+                startActivity(new Intent(this, CoverFlowActivity.class));
+                break;
+            case R.id.btn_test:
+                Snackbar.make(drawerLayout, "未添加", Snackbar.LENGTH_SHORT);
                 break;
             case R.id.btn_PhotoViewer:
                 new PhotoPagerConfig.Builder(this)
