@@ -29,5 +29,9 @@
     <string name="show_custom_property_loading">show custom property loading</string>
     <string name="title_activity_wire_walking_downloading">WireWalkingDownloadingActivity</string>
     <string name="title_activity_moire_view">MoireViewActivity</string>
+    <string name="title_activity_sale_progress_view">SaleProgressViewActivity</string>
+
+    <string name="nearOverText">即将售罄</string>
+    <string name="overText">已售罄</string>
 
 </resources>

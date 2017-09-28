@@ -143,6 +143,12 @@
                 android:layout_height="wrap_content"
                 android:text="MoireView" />
 
+            <Button
+                android:id="@+id/btn_SaleProgressBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SaleProgressBar" />
+
 
         </LinearLayout>
     </ScrollView>

@@ -1,1 +1,1 @@
-include ':app', ':ijkplayer', ':photolibrary','shortcut_lib'
+include ':app', ':ijkplayer', ':photolibrary', 'shortcut_lib'

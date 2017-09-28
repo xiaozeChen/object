@@ -93,6 +93,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     Button btnWireWalkingDownloading;
     @BindView(R.id.btn_MoireView)
     Button btnMoireView;
+    @BindView(R.id.btn_SaleProgressBar)
+    Button btnSaleProgressBar;
     private Unbinder bind;
 
     @Override
@@ -170,7 +172,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         return true;
     }
 
-    @OnClick({R.id.btn_PhotoViewer, R.id.btn_android7, R.id.btn_LiveWallPaper, R.id.fab,
+    @OnClick({R.id.btn_PhotoViewer, R.id.btn_android7, R.id.btn_LiveWallPaper, R.id.fab, R.id.btn_SaleProgressBar,
             R.id.btn_CustomDragView, R.id.btn_IDValidator, R.id.btn_WireWalkingDownloading,
             R.id.btn_CustomViewPager, R.id.btn_ColorPicker, R.id.iv_search_back, R.id.btn_IjkPlayer,
             R.id.btn_ShortHelper, R.id.btn_WeChatImageView, R.id.btn_MoireView,
@@ -228,6 +230,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 break;
             case R.id.btn_MoireView:
                 startActivity(new Intent(this, MoireViewActivity.class));
+                break;
+            case R.id.btn_SaleProgressBar:
+                startActivity(new Intent(this, SaleProgressViewActivity.class));
                 break;
             case R.id.btn_PhotoViewer:
                 new PhotoPagerConfig.Builder(this)
