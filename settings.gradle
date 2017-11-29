@@ -1,1 +1,4 @@
-include ':app', ':ijkplayer', ':photolibrary', ':overflow', 'shortcut_lib'
+//include ':annotation', ':encrypt', ':particle_animation'
+//include ':aidlclient', ':ijkplayer', ':photolibrary', ':overflow', 'shortcut_lib'
+//include ':app'
+include ':dlan_demo', ':badgenumbermanager', ':badgedemo'

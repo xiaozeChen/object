@@ -9,11 +9,9 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/ijkplayer" />
-            <option value="$PROJECT_DIR$/overflow" />
-            <option value="$PROJECT_DIR$/photolibrary" />
-            <option value="$PROJECT_DIR$/shortcut_lib" />
+            <option value="$PROJECT_DIR$/badgedemo" />
+            <option value="$PROJECT_DIR$/badgenumbermanager" />
+            <option value="$PROJECT_DIR$/dlan_demo" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
