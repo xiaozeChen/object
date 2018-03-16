@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/certificatecamaera/certificatecamaera.iml" filepath="$PROJECT_DIR$/certificatecamaera/certificatecamaera.iml" />
       <module fileurl="file://$PROJECT_DIR$/object.iml" filepath="$PROJECT_DIR$/object.iml" />
       <module fileurl="file://$PROJECT_DIR$/roundlayout/roundlayout.iml" filepath="$PROJECT_DIR$/roundlayout/roundlayout.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sample/sample.iml" filepath="$PROJECT_DIR$/sample/sample.iml" />
       <module fileurl="file://$PROJECT_DIR$/span/span.iml" filepath="$PROJECT_DIR$/span/span.iml" />
       <module fileurl="file://$PROJECT_DIR$/ssltest/ssltest.iml" filepath="$PROJECT_DIR$/ssltest/ssltest.iml" />
     </modules>

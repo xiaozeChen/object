@@ -2,4 +2,4 @@
 //include ':aidlclient', ':ijkplayer', ':photolibrary', ':overflow', 'shortcut_lib'
 //include ':app'
 //include ':dlan_demo', ':badgenumbermanager', ':badgedemo'
-include ':span', ':ssltest', ':roundlayout'
+include ':span', ':ssltest', ':roundlayout', ':certificatecamaera', ':sample'

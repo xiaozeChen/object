@@ -9,7 +9,9 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/certificatecamaera" />
             <option value="$PROJECT_DIR$/roundlayout" />
+            <option value="$PROJECT_DIR$/sample" />
             <option value="$PROJECT_DIR$/span" />
             <option value="$PROJECT_DIR$/ssltest" />
           </set>
